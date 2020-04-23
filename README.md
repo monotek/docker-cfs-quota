@@ -11,19 +11,21 @@ go code and parts of readme borrowed from:
 run on your docker host with 200 millicpu via:
 
 ```
-docker run -it --rm --cpus 0.2 monotek/docker-cfs-quota
+docker run -it --rm --env CFS_SLEEP=100ms --env CFS_ITERATIONS=50 --cpus 0.2 monotek/docker-cfs-quota
 ```
 
 or in kubernetes: 
 
 ```
-kubectl run --generator=run-pod/v1 -it --rm cfs-quota-test --image=monotek/docker-cfs-quota:latest --limits=cpu=0.2 --requests=cpu=0.2
+kubectl run --generator=run-pod/v1 -it --rm cfs-quota-test --image=monotek/docker-cfs-quota:latest --env=CFS_SLEEP=100ms --env=CFS_ITERATIONS=50 --limits=cpu=0.2 --requests=cpu=0.2
 ```
 
 Default values of the go app can be changed via env vars:
 
-* CFS_SLEEP 100ms
-* CFS_ITERATIONS 25
+* CFS_SLEEP
+  * defaults to 100ms
+* CFS_ITERATIONS 
+  * defaults to 25
 
 
 If burn time is much above 5ms your kernel is throttling
