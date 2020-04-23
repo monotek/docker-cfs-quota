@@ -19,7 +19,7 @@ docker run -it --rm --env CFS_SLEEP=100ms --env CFS_ITERATIONS=50 --cpus 0.2 mon
 or in kubernetes:
 
 ```bash
-kubectl run --generator=run-pod/v1 -it --rm cfs-quota-test --image=monotek/docker-cfs-quota:latest --env=CFS_SLEEP=100ms --env=CFS_ITERATIONS=50 --limits=cpu=0.2 --requests=cpu=0.2
+kubectl run --generator=run-pod/v1 -it --rm cfs-quota-test --image=monotek/docker-cfs-quota --env=CFS_SLEEP=100ms --env=CFS_ITERATIONS=50 --limits=cpu=0.2 --requests=cpu=0.2
 ```
 
 Default values of the go app can be changed via env vars:
