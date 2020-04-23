@@ -5,7 +5,7 @@ docker container to test cfs quota fixes in the linux kernel. infos:
 * <https://github.com/kubernetes/kubernetes/issues/67577>
 * <https://github.com/zalando-incubator/kubernetes-on-aws/pull/923>
 
-go code borrowed from (see readme there for mor info):
+go code borrowed from (see readme there for more info):
 
 * <https://gist.github.com/bobrik/2030ff040fad360327a5fab7a09c4ff1>
 
