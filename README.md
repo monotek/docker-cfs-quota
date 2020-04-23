@@ -434,6 +434,7 @@ $ docker run --rm -it --cpu-quota 20000 --cpu-period 100000 -v $(pwd):$(pwd) -w 
 2017/12/08 01:45:01 [31] burn took 99ms, real time so far: 34186ms, cpu time so far: 176ms
 2017/12/08 01:45:03 [32] burn took 99ms, real time so far: 35286ms, cpu time so far: 182ms
 2017/12/08 01:45:04 [33] burn took 5ms, rea# Overly aggressive CFS
+```
 
 We're looking at CPU bandwidth control via CFS:
 
